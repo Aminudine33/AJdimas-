@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJdimas - Detalhes do Produto</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #1f1f1f);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      margin: 0;
+    }
+
+    .box {
+      background: rgba(31, 31, 31, 0.95);
+      max-width: 600px;
+      margin: 60px auto;
+      padding: 40px 30px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 204, 255, 0.3);
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      color: #00ccff;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin: 15px;
+      padding: 14px 28px;
+      font-size: 16px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+
+    .m-pesa {
+      background: #00e676;
+      color: #000;
+    }
+
+    .e-mola {
+      background: #ffab00;
+      color: #000;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 100%;
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1 id="titulo-produto">Produto</h1>
+    <p>Escolha a forma de pagamento:</p>
+    <a class="btn m-pesa" id="btn-mpesa" href="#">Pagar com M-Pesa</a>
+    <a class="btn e-mola" id="btn-emola" href="#">Pagar com e-Mola</a>
+  </div>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const id = urlParams.get('id');
+    const preco = urlParams.get('preco');
+
+    document.getElementById('titulo-produto').innerText = `${id} Diamantes por ${preco} MT`;
+
+    const mensagemMpesa = `Olá AJdimas, quero pagar ${preco}MT por ${id} diamantes via M-Pesa.`;
+    const mensagemEmola = `Olá AJdimas, quero pagar ${preco}MT por ${id} diamantes via e-Mola.`;
+
+    document.getElementById('btn-mpesa').href = `https://wa.me/258869541265?text=${encodeURIComponent(mensagemMpesa)}`;
+    document.getElementById('btn-emola').href = `https://wa.me/258869541265?text=${encodeURIComponent(mensagemEmola)}`;
+  </script>
+</body>
+</html>

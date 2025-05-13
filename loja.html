@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJdimas - Loja</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0d0d0d, #1c1c1c);
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: #000;
+      padding: 20px;
+      text-align: center;
+      color: #00ccff;
+      font-size: 26px;
+      box-shadow: 0 2px 8px rgba(0, 204, 255, 0.3);
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      color: #00ccff;
+      margin: 30px 0 10px;
+      border-left: 5px solid #00ccff;
+      padding-left: 10px;
+      animation: fadeIn 1s ease-in;
+    }
+
+    .produto {
+      background: #1f1f1f;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 8px rgba(0, 204, 255, 0.2);
+      transition: transform 0.3s, background 0.3s;
+      animation: fadeInUp 0.5s ease forwards;
+    }
+
+    .produto:hover {
+      background: #292929;
+      transform: scale(1.02);
+    }
+
+    .produto span {
+      font-size: 18px;
+    }
+
+    .ver {
+      background: #00ccff;
+      color: #000;
+      padding: 10px 15px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .ver:hover {
+      background: #00e6e6;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>AJdimas - Loja de Diamantes</header>
+
+  <div class="container">
+    <h2>Tabela Normal 💎</h2>
+
+    <div class="produto">
+      <span>100 💎 por 75 MT</span>
+      <a class="ver" href="produto.html?id=100&preco=75">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>310 💎 por 210 MT</span>
+      <a class="ver" href="produto.html?id=310&preco=210">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>520 💎 por 350 MT</span>
+      <a class="ver" href="produto.html?id=520&preco=350">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>1060 💎 por 650 MT</span>
+      <a class="ver" href="produto.html?id=1060&preco=650">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>2180 💎 por 1290 MT</span>
+      <a class="ver" href="produto.html?id=2180&preco=1290">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>5600 💎 por 3300 MT</span>
+      <a class="ver" href="produto.html?id=5600&preco=3300">Ver Opções</a>
+    </div>
+
+    <h2>Assinaturas 💎</h2>
+
+    <div class="produto">
+      <span>100 💎 por 50 MT - ⚡ Semanal Econômico</span>
+      <a class="ver" href="produto.html?id=100&preco=50">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>450 💎 por 160 MT - ⚡ Semanal</span>
+      <a class="ver" href="produto.html?id=450&preco=160">Ver Opções</a>
+    </div>
+    <div class="produto">
+      <span>2600 💎 por 750 MT - ⚡ Mensal</span>
+      <a class="ver" href="produto.html?id=2600&preco=750">Ver Opções</a>
+    </div>
+  </div>
+</body>
+</html>
